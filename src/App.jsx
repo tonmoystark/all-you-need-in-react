@@ -6,24 +6,24 @@ import ThemeToggler from "./components/ThemeToggler"
 
 function Navigation() {
   const sections = [
-    { id: "basic", name: "Basic Props", icon: "📦" },
-    { id: "ref", name: "Ref Props", icon: "🔗" },
-    { id: "children", name: "Children Props", icon: "👶" },
-    { id: "complex", name: "Complex Props", icon: "🧩" },
-    { id: "theme", name: "Theme Props", icon: "🌞" },
+    { id: "basic", label: "Basic Props", icon: "📦" },
+    { id: "ref", label: "Ref Props", icon: "🔗" },
+    { id: "children", label: "Children Props", icon: "👶" },
+    { id: "complex", label: "Complex Props", icon: "🧩" },
+    { id: "theme", label: "Theme Props", icon: "🌞" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-700 bg-slate-900/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 overflow-x-auto px-4 py-3">
+    <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 overflow-x-auto px-6 py-4">
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-200 hover:bg-slate-800 hover:text-white hover:shadow-md"
+            className="flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-colors duration-200 hover:bg-slate-800 hover:text-white"
           >
-            <span className="text-lg">{section.icon}</span>
-            <span>{section.name}</span>
+            <span>{section.icon}</span>
+            <span>{section.label}</span>
           </a>
         ))}
       </div>
@@ -31,12 +31,22 @@ function Navigation() {
   );
 }
 
+function AppContent() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white">
+      <Navigation />
+
+      <main className="mx-auto max-w-7xl px-6 py-10">
+        {/* Your sections/components go here */}
+      </main>
+    </div>
+  );
+}
+
 function App() {
 
   return (
-    <div>
-        <Navigation />
-    </div>
+    <AppContent />
   )
 }
 
