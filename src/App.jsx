@@ -44,9 +44,13 @@ function AppContent() {
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-400">
           A comprehensive guide to understanding Props in React.
         </p>
+        <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-100">Build with NPM + React + Vite + TailwindCSS</p>
       </header>
       <main className="mx-auto max-w-7xl px-6 py-10">
-        {/* Your sections/components go here */}
+        <BasicProps />
+        <RefProps />
+        <ChildrenProps />
+        <ThemeToggler /> 
       </main>
     </div>
   );
