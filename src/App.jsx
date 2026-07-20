@@ -49,6 +49,7 @@ function AppContent() {
       <main className="mx-auto max-w-7xl px-6 py-10">
         <BasicProps />
         <ChildrenProps />
+        <ComplexProps />
         <RefProps />
         <ThemeToggler /> 
       </main>
