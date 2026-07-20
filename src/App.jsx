@@ -48,8 +48,8 @@ function AppContent() {
       </header>
       <main className="mx-auto max-w-7xl px-6 py-10">
         <BasicProps />
-        <RefProps />
         <ChildrenProps />
+        <RefProps />
         <ThemeToggler /> 
       </main>
     </div>
